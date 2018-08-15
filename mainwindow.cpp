@@ -51,8 +51,8 @@ MainWindow::MainWindow(QWidget *parent)
   // Check if user is using arm processor(Raspberry pi)
   QString UserAgent = this->webview->page()->profile()->httpUserAgent();
   qDebug() << UserAgent;
-  qDebug() << "Changing user agent to Firefox 57";
-  UserAgent ="Mozilla/5.0 (X11; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0";
+  qDebug() << "Changing user agent to Firefox 61";
+  UserAgent ="Mozilla/5.0 (X11; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0";
   this->webview->page()->profile()->setHttpUserAgent(UserAgent);
   qDebug() << UserAgent.contains("Linux arm");
   if (UserAgent.contains("Linux arm")) {
